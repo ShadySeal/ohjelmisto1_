@@ -1,13 +1,11 @@
-litra = 3.785
-
-def lasku():
+def lasku(gallona):
     litra = 3.785
-    while True:
-        gallona = int(input("Anna gallonamäärä: "))
-        if gallona < 0 :
-            break
-        tulos = gallona * litra
-        print(tulos, "litraa")
-    return True
+    summa = gallona * litra
+    return summa
 
-lasku()
+while True:
+    gallona = int(input("Anna gallonamäärä: "))
+    if gallona < 0:
+        break
+    tulos = lasku(gallona)
+    print(tulos, "litraa")
