@@ -1,15 +1,15 @@
 import random
 
-luku = int(input("Anna maksimiluku: "))
-
-def noppa():
+def noppa(luku):
     maara = 0
     while maara < luku:
         arvo = random.randint(1, 6)
-        print(arvo)
         maara = maara + arvo
         if (maara > luku):
             maara = maara - arvo
+        else:
+            print(arvo)
     print(maara)
     return
-noppa()
+luku = int(input("Anna maksimiluku: "))
+noppa(luku)
