@@ -13,7 +13,7 @@ class Auto:
             self.tamanhetkinen_nopeus = 0
 
     def kulje(self, aika):
-        self.kuljettu_matka = self.tamanhetkinen_nopeus * aika
+        self.kuljettu_matka += self.tamanhetkinen_nopeus * aika
 
 auto = Auto("ABC-123", 142)
 
