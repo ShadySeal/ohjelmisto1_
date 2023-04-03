@@ -1,18 +1,17 @@
 from flask import Flask, request
 
 app = Flask(__name__)
-@app.route('/alkuluku')
-def summa():
-    args = request.args
-    num = int(args.get("num"))
+@app.route('/alkuluku/<num>')
+def summa(num):
+    num = int(num)
 
-    flag = False
+    flag = True
     if num == 1:
         print(num, "is not a prime number")
     elif num > 1:
         for i in range(2, num):
             if (num % i) == 0:
-                flag = True
+                flag = False
                 break
 
         if flag:
